@@ -101,7 +101,7 @@ const render = setup(MyFancyComponent)
 </script></body>
 ```
 
-## 4. Build single file components 📁
+## 4. Build single file components in ES6 modules 📁
 Just like in Vue.js. A component should export it's _view function_ and an optional _factory to create its model_. Perhaps some functions to manipulate a components model. 💥💥💥[**Compose views and models.**](https://reactjs.org/docs/composition-vs-inheritance.html)💥💥💥
 ```  js
 <body><script type="module">
