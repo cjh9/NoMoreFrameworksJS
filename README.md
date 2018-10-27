@@ -5,7 +5,7 @@ What will happen in 5 years? You don't know if your framework will survive, but 
 
 ## 1. Build views with virutal DOM 🎨
 They are pretty fast (fast enough), [Benchmark](https://stefankrause.net/js-frameworks-benchmark8/table.html). A lot of frameworks nowadays use it. A view is just a function that returns virtual dom, which is an object (or array of objects) which describes how the html should look like. Recalclulate the virtual dom for the whole application at each render. Inefficient? ([Root of all evil](http://wiki.c2.com/?PrematureOptimization) + moore's law + webworkers) 
-```
+``` js
 <body><script type="module">
 import { h, setup } from "https://unpkg.com/lifecycle-petit-dom?module"
 
@@ -24,7 +24,7 @@ setup(MyFancyComponent)
 
 ## 2. Use hyperscript for the views ☝️
 Don't use JSX, hyperscript works great! The first argument should be the tag name, second should be an object with properties (so you can attach event listeners) or attributes, and the third should be the contents of the domnode. 
-```
+```  js
 <body><script type="module">
 import { h, setup } from "https://unpkg.com/lifecycle-petit-dom?module"
 
@@ -51,7 +51,7 @@ const render = setup(MyFancyComponent)
 
 ## 3. Use DOM lifecycle hooks for animation ▶️ 
 The view library should support onremove and oncreate callbacks so you can make nice animations. If an element is removed all its ancestors should be notified as well. You may want to write some utility function for this.
-```
+```  js
 <body><script type="module">
 import { h, setup } from "https://unpkg.com/lifecycle-petit-dom?module"
 
@@ -103,7 +103,7 @@ const render = setup(MyFancyComponent)
 
 ## 4. Build single file components 📁
 Just like in Vue.js. A component should export it's _view function_ and an optional _factory to create its model_. Perhaps some functions to manipulate a components model. 💥💥💥[**Compose views and models.**](https://reactjs.org/docs/composition-vs-inheritance.html)💥💥💥
-```
+```  js
 <body><script type="module">
 import { h, setup } from "https://unpkg.com/lifecycle-petit-dom?module"
 
@@ -215,7 +215,7 @@ Use [named function parameters](http://2ality.com/2011/11/keyword-parameters.htm
 
 ## Please send your components ✉️
 They should be in a single file, pluggable, expose its view, and a factory function to create its model. You can assume that the view is called with it's model. Perhaps you can let the view register its own state, and only supply an id to the view. To keep it completely isolated from the outside world.
-```
+```  js
 <body><script type="module">
 import { h, setup } from "https://unpkg.com/lifecycle-petit-dom?module"
 
@@ -275,7 +275,7 @@ const render = setup(Root)
 
 ### Don't like to render? Hook in to the events 🔨 
 Or do some thing else, create utility functions as much as possible.
-```
+```  js
 <body><script type="module">
 import { h as hframework, setup } from "https://unpkg.com/lifecycle-petit-dom?module"
 
