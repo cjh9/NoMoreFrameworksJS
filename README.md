@@ -114,7 +114,7 @@ const randColor = (current) =>
 .filter( c => c !== current)
 [Math.round(Math.random()*2)]
 
-// In Ball.js
+/* ########################### In Ball.js ########################### */
 
 const createBallModel = ()=> ({
     x:Math.random(),
@@ -168,7 +168,7 @@ h('div',
     ['Click me']
 )
 
-// In BallField.js
+/* ########################### In BallField.js ########################### */
 
 const createBallFieldModel = ()=> ({
     balls:[
