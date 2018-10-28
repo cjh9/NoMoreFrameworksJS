@@ -1,7 +1,7 @@
 # NoMoreFrameworks.js
 Embrace the web 🌍 Keep it simple ✨ 
 
-What will happen in 5 years? You don't know if your framework will survive, but JavaScript will for sure! ✌ And a lot more functionality will come with new JS standards. These are some suggestions when building your web application. ✅ Just copy-paste the demos and add them to a html file.
+What will happen in 5 years? You don't know if your framework will survive, but JavaScript will for sure! ✌ And a lot more functionality will come with new JS standards. These are some suggestions when building your web application. ✅ They are fully runnable, just copy-paste the demo and paste it to a html file.
 
 ## 1. Build views with virutal DOM 🎨
 They are pretty fast (fast enough), [Benchmark](https://stefankrause.net/js-frameworks-benchmark8/table.html). A lot of frameworks nowadays use it. A view is just a function that returns virtual dom, which is an object (or array of objects) which describes how the html should look like. Recalclulate the virtual dom for the whole application at each render. Inefficient? ([Root of all evil](http://wiki.c2.com/?PrematureOptimization) + moore's law + webworkers) 
