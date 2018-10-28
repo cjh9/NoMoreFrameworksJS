@@ -1,4 +1,4 @@
-# NoMoreFrameworks.js
+# NoMoreFrameworksJS
 Embrace the web 🌍 Keep it simple ✨ 
 
 What will happen in 5 years? You don't know if your framework will survive, but JavaScript will for sure! ✌ And a lot more functionality will come with new JS standards. These are some suggestions when building your web application. ✅ They are fully runnable, just copy-paste the demo and paste it to a html file.
