@@ -1,0 +1,72 @@
+<body><script type="module">
+import { h, setup } from "https://unpkg.com/lifecycle-petit-dom?module"
+
+
+var items = [
+    {name:'Test', address:'Teststreet 32', phone:202342},
+    {name:'Test', address:'Teststreet 32', phone:202342},
+    {name:'Test', address:'Teststreet 32', phone:202342},
+    {name:'Test', address:'Teststreet 32', phone:202342}
+]
+
+var RightPane = ({item}) =>
+h('div', {}, 
+    item ? Object.keys(item).map( key =>
+        h('input', {
+            type:'text',
+            style:`display:block;`,
+            oninput: evt => {
+                item[key] = evt.target.value,
+                render()
+            },
+            value: item[key]
+        })
+    ) : 'please select your item'
+)
+
+var SideBar = ({items, onclick, activeIdx}) =>
+h('div', {
+    style:`
+        width:300px;
+    `
+}, [
+    items.map( (itm, idx) => 
+        h('div', {
+            style:`
+                cursor:pointer;
+                ${activeIdx === idx ? 'font-weight:bold;' : ''}
+            `,
+            onclick: ()=> onclick(idx)
+        }, [
+            itm.name
+        ])
+    )
+])
+
+var activeIdx = -1
+
+const Root = () => {
+    return h('div', {
+        style:`
+            display:flex;
+        `
+    }, [
+        SideBar({
+            items,
+            activeIdx,
+            onclick: newIdx => {
+                activeIdx = newIdx
+                render()
+            }
+        }),
+        RightPane({
+            item:items[activeIdx]
+        })
+    ])
+}
+
+    
+const render = setup(Root)
+
+
+</script></body>
