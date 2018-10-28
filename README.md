@@ -213,7 +213,7 @@ Try to make the application modular and pluggable, use ES6 modules! Encapsulate 
 ## 7. Conventions 🤝
 Use [named function parameters](http://2ality.com/2011/11/keyword-parameters.html), at least for the views. `nameRenderFn` : A composeable renderfunction (similar to children in react),  for example `Drawer({activeIdx, contentRenderFn, drawerModel})`. `activeIdx` : An integer which is and index, should end with "Idx". View function should be capitalized, `Drawer` an the model factory should be like this : `createDrawerModel`. 
 
-## Please send your components ✉️
+## 8. Please send your components ✉️
 They should be in a single file, pluggable, expose its view, and a factory function to create its model. You can assume that the view is called with it's model. Perhaps you can let the view register its own state, and only supply an id to the view. To keep it completely isolated from the outside world.
 ```  js
 <body><script type="module">
@@ -273,7 +273,7 @@ const render = setup(Root)
 </script></body>
 ```
 
-### Don't like to render? Hook in to the events 🔨 
+### 9. Don't like to render? Hook in to the events 🔨 
 Or do some thing else, create utility functions as much as possible.
 ```  js
 <body><script type="module">
@@ -302,7 +302,7 @@ const render = setup(Root)
 </script></body>
 ```
 
-## 6. What else? Please tell me :) Give suggestions 💡
+## 10. What else? Please tell me :) Give suggestions 💡
 
 
 
